@@ -2,10 +2,14 @@ div
 {
     position: absolute;
 }
+dl，dt
+{
+    position: absolute;
+}
 dl dt
 {
     width: 2000px;
-    height:10px;
+    height:5px;
     margin: 0px;
     border: 0px;
 }

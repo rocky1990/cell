@@ -5,12 +5,19 @@ cell.nav=(function () {
     var stateMap={
         $container:null,
         container:null,
-    },jqueryMap,onstart,onstop,onrestart;
+    },jqueryMap,onstart,onstop,onrestart,initnav;
     setjqueryMap=function () {
       jqueryMap.$steptextinput=$("#step-text-input");
     };
     onstart=function () {
-        jqueryMap.$steptextinput
+        $steptextinput=$("#step-text-input");
+        var stepcount=parseInt($steptextinput.val());
+        cell.view.initview({arrcount:stepcount,});
     };
-
+    initnav=function () {
+      // cell.view.initview();
+      //   cell.view.simulate();
+        $("#start").click(onstart);
+    };
+    return {initnav:initnav,};
 }());
